@@ -1,4 +1,4 @@
-# MoneyBase - SwiftUI Multithreading Demo
+# StockMarkete - SwiftUI Multithreading Demo
 
 A SwiftUI iOS application demonstrating modern multithreading patterns and Swift Concurrency (async/await) for real-time financial data fetching and display.
 
@@ -20,7 +20,7 @@ https://github.com/user-attachments/assets/df8e94dd-72b0-49ad-bd7a-94d663268799
 This project follows the **MVVM (Model-View-ViewModel)** architecture pattern:
 
 ```
-MoneyBaseProject/
+StockMarketProject/
 ├── Screens/
 │   ├── Market/
 │   │   ├── MarketListScreen.swift      # Market list view
@@ -37,7 +37,7 @@ MoneyBaseProject/
 ├── NetworkManager/
 │   ├── NetworkManager.swift            # Singleton network manager
 │   └── APIRouter.swift                 # API endpoint definitions
-└── MoneyBaseProjectApp.swift           # Main app entry point
+└── StockMarketProjectApp.swift           # Main app entry point
 ```
 
 ## 🚀 Multithreading Implementation
@@ -67,7 +67,7 @@ func fetchMarketData() async {
 ```
 
 ### 2. **NetworkManager with URLSession**
-The [`NetworkManager`](MoneyBaseProject/NetworkManager/NetworkManager.swift:17) class uses URLSession's async/await API for efficient network requests:
+The [`NetworkManager`](StockMarketProject/NetworkManager/NetworkManager.swift:17) class uses URLSession's async/await API for efficient network requests:
 
 ```swift
 func request<T: Decodable>(
@@ -117,7 +117,7 @@ The app integrates with the **Yahoo Finance Real-Time API** via RapidAPI:
 
 ### API Configuration
 
-To use your own API key, update the [`APIRouter.swift`](MoneyBaseProject/NetworkManager/APIRouter.swift:52) file:
+To use your own API key, update the [`APIRouter.swift`](StockMarketProject/NetworkManager/APIRouter.swift:52) file:
 
 ```swift
 "x-rapidapi-key": "your_api_key_here"
@@ -147,10 +147,10 @@ git clone <repository-url>
 
 2. Open the project in Xcode:
 ```bash
-open MoneyBaseProject.xcodeproj
+open StockMarketProject.xcodeproj
 ```
 
-3. Configure your API key in [`APIRouter.swift`](MoneyBaseProject/NetworkManager/APIRouter.swift:52)
+3. Configure your API key in [`APIRouter.swift`](StockMarketProject/NetworkManager/APIRouter.swift:52)
 
 4. Build and run the project on a simulator or device
 
@@ -158,8 +158,8 @@ open MoneyBaseProject.xcodeproj
 
 The project includes unit tests for ViewModels:
 
-- [`MarketViewModelTest.swift`](MoneyBaseProjectTests/MarketViewModelTest.swift:1) - Tests for market data fetching
-- [`StockViewModelTest.swift`](MoneyBaseProjectTests/StockViewModelTest.swift:1) - Tests for stock data fetching
+- [`MarketViewModelTest.swift`](StockMarketProjectTests/MarketViewModelTest.swift:1) - Tests for market data fetching
+- [`StockViewModelTest.swift`](StockMarketProjectTests/StockViewModelTest.swift:1) - Tests for stock data fetching
 
 Run tests using:
 ```bash
