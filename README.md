@@ -2,6 +2,10 @@
 
 A SwiftUI iOS application demonstrating modern multithreading patterns and Swift Concurrency (async/await) for real-time financial data fetching and display.
 
+## 📱 Demo
+
+https://github.com/user-attachments/assets/df8e94dd-72b0-49ad-bd7a-94d663268799
+
 ## 📱 Features
 
 - **Market Summary**: View real-time market data with auto-refresh functionality
